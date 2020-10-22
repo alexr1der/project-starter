@@ -1,0 +1,61 @@
+  return (
+  <Draggable
+         handle=".drag"
+         defaultPosition={{x: 0, y: 0}}
+         position={null}
+         grid={[5, 5]}
+         scale={1}
+         onStart={this.handleStart}
+         onDrag={this.handleDrag}
+         onStop={this.handleStop}
+         >
+<div className="drag">
+    <div className="col-10 col-md-8 col-lg-7">
+        { errorMessage }
+    <div id="drop-region">
+    <div class="drop-message">
+        Drag & Drop images or click to upload
+    </div>
+    <div id="image-preview"></div>
+                </div>
+
+
+
+
+
+
+<div id="drop-region">
+    <div class="drop-message">
+        Drag & Drop images or click to upload
+    </div>
+    <div id="image-preview"></div>
+</div>
+
+
+
+
+
+
+        <div className="input-group, drag">
+ 
+          <input 
+            type="text" 
+            placeholder="Add your words of wisdom here..." 
+            value={this.state.content}
+            
+            className="form-control mr-3 rounded"
+            onChange={this.contentChanged}
+          />
+
+          <button className="btn btn-primary" onClick={this.savePost}>Save Post</button>
+             <button className="btn btn-primary"> Add Field for Pic</button>
+             <button className="btn btn-primary"> Add Field for Text</button>
+        </div>
+      </div>
+      </div>
+ </ Draggable>
+    );
+  }
+}
+
+export default PostFormPage;
